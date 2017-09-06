@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="styles.css">
+
 # Advanced JavaScript @ FMI / 2017-2018 /
 
 ## Lecturers: 
