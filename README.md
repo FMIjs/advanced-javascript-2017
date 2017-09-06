@@ -7,4 +7,4 @@
 
 ## Contacts:
 
-<script async defer src="https://fmijs.slack.com/slackin.js?large"></script>
+[![Slack Status](https://fmijs.slack.com/badge.svg)](https://fmijs.slack.com)
