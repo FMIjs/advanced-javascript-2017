@@ -24,7 +24,7 @@ function Robot(name, speed) {
   this.name = name;
   this.speed = speed;
 
-  score = 0; // <- this will be a "private variable" due to the closures using it (increaseScore, getScore)
+  let score = 0; // <- this will be a "private variable" due to the closures using it (increaseScore, getScore)
 
   this.getSpeed = function (params) { // <- this function will be created for each object of type Robot
     return this.speed;
