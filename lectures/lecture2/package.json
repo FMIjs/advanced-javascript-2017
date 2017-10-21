@@ -1,0 +1,15 @@
+{
+  "name": "lecture2",
+  "version": "1.0.0",
+  "description": "Lecture 2 - FMIJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js && echo \"Done!\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

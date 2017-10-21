@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Lecture 2",
+      "program": "${workspaceRoot}/lecture2.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Index",
+      "program": "${workspaceRoot}/index.js"
+    }
+  ]
+}
