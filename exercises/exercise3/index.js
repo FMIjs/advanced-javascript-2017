@@ -1,0 +1,1 @@
+console.log('Calculate the average score of students');
