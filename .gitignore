@@ -1,0 +1,17 @@
+/jre/
+/classes/
+/installations/
+/target/
+/bin/
+/work/
+/node_modules/
+npm-debug.*
+/.idea/
+*.log
+.classpath
+.project
+.vscode
+.settings
+package-lock.json
+#vscode local settings ignore
+.vscode/settings.json
