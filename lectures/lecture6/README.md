@@ -11,4 +11,4 @@
     * [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html);
   * Debugging TypeScript with `*.js.map` files;
   * [Type definition files](https://github.com/DefinitelyTyped/DefinitelyTyped);
-  * `tasks.json`;
+  * [`tasks.json`](https://code.visualstudio.com/docs/languages/typescript#_transpiling-typescript-into-javascript);
