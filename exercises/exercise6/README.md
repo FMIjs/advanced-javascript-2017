@@ -25,11 +25,11 @@
     ```typescript
     constructor(name: string, modelCtor: any = DefaultDbStructure)
 
-    insert(entry: T, skipSave = false): Promise<T>
+    insert(entry: T): Promise<T>
 
-    delete(id: number, skipSave = false): Promise<T>
+    delete(id: number): Promise<T>
 
-    update(updated: T, skipSave = false): Promise<T>
+    update(updated: T): Promise<T>
 
     saveToDisk = (data: T): Promise<T>
 
