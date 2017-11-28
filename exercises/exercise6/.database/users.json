@@ -1,20 +1,7 @@
 {
-  "index": 3,
+  "index": 1,
   "entities": [
-    null,
-    {
-      "firstName": "Ivan",
-      "email": "ivan@baba.bg",
-      "_id": 1
-    },
-    {
-      "firstName": "Ivan2",
-      "email": "ivan2@baba.bg",
-      "_id": 2
-    }
+    null
   ],
-  "emails": [
-    "ivan@baba.bg",
-    "ivan2@baba.bg"
-  ]
+  "emails": []
 }
