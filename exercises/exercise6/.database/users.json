@@ -1,0 +1,20 @@
+{
+  "index": 3,
+  "entities": [
+    null,
+    {
+      "firstName": "Ivan",
+      "email": "ivan@baba.bg",
+      "_id": 1
+    },
+    {
+      "firstName": "Ivan2",
+      "email": "ivan2@baba.bg",
+      "_id": 2
+    }
+  ],
+  "emails": [
+    "ivan@baba.bg",
+    "ivan2@baba.bg"
+  ]
+}
