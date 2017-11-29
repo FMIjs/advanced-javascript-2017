@@ -1,4 +1,5 @@
-// mixins in ES6 - the str8fwd way
+// this is just another class. we want to 
+// mix something into it
 class Testov {
   constructor () {
     console.log('construct an object')
@@ -6,15 +7,17 @@ class Testov {
   }
 }
 
-let Doing = function () {
+// now we use ES5 syntax here to get
+// an enumerable property
+// as all ES6 class definitions are
+// non-enumerable by default and
+// would not work with Object.assign
+var Doing = function () { }
 
+Doing.prototype.method = function () {
+  console.log(`i knoo hau 2 use [${this.somevar}]`)
 }
 
-Doing.prototype = {
-  method: function () {
-    console.log(`i knoo hau 2 use [${this.somevar}]`)
-  }
-}
 
 // no instancing from the mixin directly
 let d = new Doing()
