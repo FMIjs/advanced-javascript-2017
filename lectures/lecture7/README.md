@@ -4,7 +4,14 @@
 
 ## Agenda
 
-### JS in the Browser
+1. [JS in the Browser](js-in-the-browser)
+2. [AJAX, XHR, `fetch`](ajax-xhr-fetch)
+3. [Web Workers](#web-workers)
+4. [Events in the browser](#events-in-the-browser)
+
+
+## 1. JS in the Browser
+
 * `window` Object
   * Represents an open window in a browser
   * Equivalent of `global` in Node
@@ -19,6 +26,12 @@
     * Inline tags (`img`, `br`, ...)
     * `id`, `class`
     * `img` tags: `alt`, `src`
+  * Accessing tags
+    * `getElementById()`
+    * `getElementByClassName()`
+    * ...
+    * `querySelector()`
+    * `querySelectorAll()`
   * Manipulating tag attributes
     * `getAttribute()`
     * `setAttribute()`
@@ -52,3 +65,61 @@
     * `JSON.stringify()` and its parametres
 * `sessionStorage` Object
   * Same as `localStorage`, but data gets cleared when the page session ends
+
+## 2. AJAX, XHR, `fetch`
+
+* "Asynchronous JavaScript And XML"
+* Ye old ways:
+  * [jQuery](http://api.jquery.com/jquery.ajax/)
+  * [XHR](https://www.w3schools.com/xml/xml_http.asp)
+* [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+  * The improved way of communicating with the server
+  * Promise based
+  ```javascript
+  var myImage = document.querySelector('img');
+
+  fetch('flowers.jpg').then(function(response) {
+    return response.blob();
+  })
+  .then(function(myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
+  ```
+  * [Event better](https://github.com/axios/axios)
+
+## 3. Web Workers
+
+* Means to run scripts in background threads
+* Used for
+  * Animaions
+  * Heavy Calculations
+  * etc.
+* Creating a web worker
+  ```javascript
+  var myWorker = new Worker('worker.js'); // worker.js holds the actual worker
+  ```
+* Communicating with the web worker
+  * Happens via the message bus
+  * `postMessage()`
+  * `onmessage()`
+* Web workers can't access some thing the main thread can for instance the DOM Tree
+
+## 4. Events in the browser
+
+* Event types
+  * Resource Events
+    * `load`
+    * `unload`
+    * ...
+  * Network Events
+    * `online` - We've gained access to the network
+    * `offline` - ...
+  * Mouse Events
+    * `click`
+    * `mouseover`
+    * ...
+  * [and more](https://developer.mozilla.org/en-US/docs/Web/Events)
+* Event Listeners
+  * Allow us to handle certain events
+  * `addEventListener()`
