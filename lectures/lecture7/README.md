@@ -9,7 +9,6 @@
 3. [Web Workers](#3-web-workers)
 4. [Events in the browser](#4-events-in-the-browser)
 
-
 ## 1. JS in the Browser
 
 * `window` Object
@@ -68,10 +67,15 @@
 
 ## 2. AJAX, XHR, `fetch`
 
-* "Asynchronous JavaScript And XML"
+* *"Asynchronous JavaScript And XML"*
 * Ye old ways:
   * [jQuery](http://api.jquery.com/jquery.ajax/)
   * [XHR](https://www.w3schools.com/xml/xml_http.asp)
+    * *"XMLHttpRequest"*
+    * `open()`
+    * `send()`
+    * `onreadystatechange()`
+    * [XHR States](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState)
 * [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
   * The improved way of communicating with the server
   * Promise based
@@ -86,7 +90,12 @@
     myImage.src = objectURL;
   });
   ```
-  * [Even better](https://github.com/axios/axios)
+  * Even better we can use [this](https://github.com/axios/axios)
+  * CORS
+    * *"Cross-Origin Resource Sharing"*
+    * What are [cookies](https://en.wikipedia.org/wiki/HTTP_cookie)? 🍪
+    * Handles gainin access to resources from a server on a different origin
+    * A means to prevent intrusions and data hijacking
 
 ## 3. Web Workers
 
@@ -121,5 +130,6 @@
     * ...
   * [and more](https://developer.mozilla.org/en-US/docs/Web/Events)
 * Event Listeners
-  * Allow us to handle certain events
   * `addEventListener()`
+  * `removeEventListener()`
+* [Event bubbling and capturing](https://javascript.info/bubbling-and-capturing)
