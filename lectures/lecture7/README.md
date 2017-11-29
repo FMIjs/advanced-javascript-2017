@@ -4,10 +4,10 @@
 
 ## Agenda
 
-1. [JS in the Browser](js-in-the-browser)
-2. [AJAX, XHR, `fetch`](ajax-xhr-fetch)
-3. [Web Workers](#web-workers)
-4. [Events in the browser](#events-in-the-browser)
+1. [JS in the Browser](#1-js-in-the-browser)
+2. [AJAX, XHR, `fetch`](#2-ajax-xhr-fetch)
+3. [Web Workers](#3-web-workers)
+4. [Events in the browser](#4-events-in-the-browser)
 
 
 ## 1. JS in the Browser
@@ -86,7 +86,7 @@
     myImage.src = objectURL;
   });
   ```
-  * [Event better](https://github.com/axios/axios)
+  * [Even better](https://github.com/axios/axios)
 
 ## 3. Web Workers
 
