@@ -4,7 +4,8 @@ enum Strategy {
   BFS = 1,
   Direct = 2
 }
-
+// a simple interface to denote wheter a 
+// selector piece is designating id, tag or class
 interface IToken {
   id: string|undefined,
   tag: string|undefined,
@@ -19,6 +20,8 @@ function test_tokenize() {
   res = tokenize("div#baba.class ul li")
 }
 
+// effectively tokenize- split by whitespace
+// and then use regex to find the selector parts
 function tokenize(sel: string) : IToken[] {
   let tokstr = sel.split(/[\s]+/)
   let tokres: IToken[] = []
@@ -40,7 +43,10 @@ function tokenize(sel: string) : IToken[] {
   return tokres
 }
 
-function DFS(root: HTMLElement, matcher: Function, depth: number = 0) : HTMLElement[] {
+// a simple recrusion (a DFS in fact), that will
+// try to match a partial selector, based on some
+// root node provided
+function recurse(root: HTMLElement, matcher: Function, depth: number = 0) : HTMLElement[] {
   let eres: HTMLElement[] = []
   const nodes = Array.prototype.slice.call(root.childNodes, 0)
     .filter( (e:HTMLElement) => e.tagName !== undefined)
@@ -53,7 +59,7 @@ function DFS(root: HTMLElement, matcher: Function, depth: number = 0) : HTMLElem
       eres.push(cn) 
     } else {
       // not the most effective way maybe to concat
-      eres = eres.concat(...DFS(cn, matcher, depth + 1))      
+      eres = eres.concat(...recurse(cn, matcher, depth + 1))      
     } 
   }
 
@@ -68,7 +74,7 @@ function select(sel: string) : HTMLElement[] {
     let ncur:HTMLElement[] = []
     console.log(curr)
     for (let elem of curr) {
-      ncur.push(...DFS(elem, (el:HTMLElement):boolean =>
+      ncur.push(...recurse(elem, (el:HTMLElement):boolean =>
         (tok.id === undefined || (el.id === tok.id)) &&
         (tok.class === undefined || (el.classList.contains(tok.class))) &&
         (tok.tag === undefined || (el.tagName === tok.tag.toUpperCase()))
