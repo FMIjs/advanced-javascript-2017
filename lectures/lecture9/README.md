@@ -3,6 +3,7 @@
 ### 13.12.17
 
 ---
+
 ## Agenda
 
 1. [Angular Intro 📐](#1-angular-intro-📐)
@@ -25,7 +26,7 @@
 
 * Getting started
   * What is `Angular CLI`?
-    * It makes it easy to create an application that already works, right out of the box. 
+    * It makes it easy to create an application that already works, right out of the box.
     * Created by the comunity
     * Started as a fork of [Ember](https://www.emberjs.com/)'s CLI
     * Angular [Seed](https://github.com/angular/angular-seed)

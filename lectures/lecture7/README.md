@@ -5,9 +5,9 @@
 ## Agenda
 
 1. [JS in the Browser](#1-js-in-the-browser)
-2. [AJAX, XHR, `fetch`](#2-ajax-xhr-fetch)
-3. [Web Workers](#3-web-workers)
-4. [Events in the browser](#4-events-in-the-browser)
+1. [AJAX, XHR, `fetch`](#2-ajax-xhr-fetch)
+1. [Web Workers](#3-web-workers)
+1. [Events in the browser](#4-events-in-the-browser)
 
 ## 1. JS in the Browser
 
