@@ -18,7 +18,6 @@ Doing.prototype.method = function () {
   console.log(`i knoo hau 2 use [${this.somevar}]`)
 }
 
-
 // no instancing from the mixin directly
 let d = new Doing()
 d.method()

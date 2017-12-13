@@ -1,0 +1,21 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.0/d3.js"></script>
+  <title> d3 + express + socket.io streaming </title>
+  <style>
+  rect {
+    fill-color: #efe;
+    border: 1px solid #eee;
+  }
+  </style>
+</head>
+
+<body>
+    <h3> streaming into d3 chart </h3>
+    <p> last received data is : <span id='lastdata'> </span> </p>
+ 
+    <svg width="960" height="500"></svg>
+    <script src="/app.js"></script>
+</body>
+</html>
