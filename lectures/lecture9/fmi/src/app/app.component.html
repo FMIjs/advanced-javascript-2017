@@ -1,0 +1,5 @@
+<app-navigation [title]="title" (logout)="logout()"></app-navigation>
+<div>
+  <!-- <input type="text" [value]="title" (keyup)="setTitle($event)"> -->
+  <input type="text" [(ngModel)]="title">
+</div>
