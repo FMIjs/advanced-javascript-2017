@@ -1,0 +1,8 @@
+<div>
+  <ng-content select=".my-header"></ng-content>
+  <h3>{{title}}</h3>
+  <p>{{body}}</p>
+
+  <button (click)="postClick()">Click me</button>
+  <ng-content select=".my-footer"></ng-content>
+</div>

@@ -1,0 +1,12 @@
+<!-- <div>
+  <h1>Post list</h1>
+  <input type="text" #searchInput>
+  <div id="post-container">
+    <app-post *ngFor="let post of filteredData" [id]="post.id" [title]="post.title" [body]="post.body" (btnClick)="btnClickHandler($event)">
+      <div class="my-header">My header</div>
+      <div class="my-footer">My footer</div>
+    </app-post>
+  </div>
+</div> -->
+<app-nav></app-nav>
+<router-outlet></router-outlet>
