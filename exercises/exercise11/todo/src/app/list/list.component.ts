@@ -33,14 +33,14 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subscription = observableFromEvent(this.searchInput.nativeElement, 'keyup').pipe(
       map((event: any) => event.target.value),
       debounceTime(100)
-    ).subscribe((data) => this.searchTextLink$.next(data));
+    ).subscribe(this.searchTextLink$);
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 
-  statusChange(index: number, val: boolean) {
-    this.dataService.statusChange(index, val);
+  statusChange(id: string, val: boolean) {
+    this.dataService.statusChange(id, val);
   }
 }

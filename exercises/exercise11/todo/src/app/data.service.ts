@@ -3,18 +3,26 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class DataService {
-  data: any[] = [];
+  counter = 0;
+  todos: { [id: string]: { id: string, title: string, completed: boolean } } = {};
+  ids: string[] = [];
   todos$: BehaviorSubject<any> = new BehaviorSubject([]);
 
   constructor() { }
 
-  add(todo: any) {
-    this.data = this.data.concat(todo);
-    this.todos$.next(this.data);
+  add(title, completed) {
+    const id = (this.counter++).toString();
+    this.todos[id] = { id, title, completed };
+    this.ids.push(id);
+    this.pushUpdate();
   }
 
-  statusChange(index: number, val: boolean) {
-    this.data[index].completed = val;
-    this.todos$.next(this.data);
+  statusChange(id: string, completed: boolean) {
+    this.todos[id].completed = completed;
+    this.pushUpdate();
+  }
+
+  private pushUpdate() {
+    this.todos$.next(this.ids.map(id => this.todos[id]));
   }
 }
