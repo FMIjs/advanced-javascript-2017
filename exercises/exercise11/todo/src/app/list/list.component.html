@@ -1,0 +1,6 @@
+<input type="text" #searchInput>
+<ul>
+  <li *ngFor="let todo of (todos$ | async)">
+    {{todo.title}}
+  </li>
+</ul>
