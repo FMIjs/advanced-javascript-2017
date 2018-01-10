@@ -39,4 +39,8 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
+
+  statusChange(index: number, val: boolean) {
+    this.dataService.statusChange(index, val);
+  }
 }

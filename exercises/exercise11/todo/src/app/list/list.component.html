@@ -1,6 +1,4 @@
 <input type="text" #searchInput>
-<ul>
-  <li *ngFor="let todo of (todos$ | async)">
-    {{todo.title}}
-  </li>
-</ul>
+<div>
+  <app-todo *ngFor="let todo of (todos$ | async); let i = index;" [title]="todo.title" [completed]="todo.completed" (statusChange)="statusChange(i, $event)"></app-todo>
+</div>

@@ -12,4 +12,9 @@ export class DataService {
     this.data = this.data.concat(todo);
     this.todos$.next(this.data);
   }
+
+  statusChange(index: number, val: boolean) {
+    this.data[index].completed = val;
+    this.todos$.next(this.data);
+  }
 }

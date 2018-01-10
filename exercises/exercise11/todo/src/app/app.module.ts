@@ -8,6 +8,7 @@ import { CreateComponent } from './create/create.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DataService } from './data.service';
+import { TodoComponent } from './todo/todo.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DataService } from './data.service';
     AppComponent,
     ListComponent,
     CreateComponent,
-    NavigationComponent
+    NavigationComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

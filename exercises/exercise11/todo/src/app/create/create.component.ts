@@ -14,7 +14,7 @@ export class CreateComponent implements OnInit {
   }
 
   add(title: string) {
-    this.dataService.add({ title: title });
+    this.dataService.add({ title: title, completed: false });
   }
 
 }
